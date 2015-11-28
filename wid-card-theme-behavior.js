@@ -40,8 +40,7 @@ Polymer.WidCardThemeBehavior = {
 
       var snowImg = document.createElement('img');
       snowImg.src = '/images/themes/xmass/' + this._getImage(imgIndex);
-      snowImg.setAttribute('class', 'xmass_snow_top');
-      snowImg.setAttribute('class', heightClass);
+      snowImg.setAttribute('class', 'xmass_snow_top ' + heightClass);
       Polymer.dom(this.$.mainContent).appendChild(snowImg);
     }
   },
