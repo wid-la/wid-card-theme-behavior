@@ -36,10 +36,12 @@ Polymer.WidCardThemeBehavior = {
       var plusWidthCount = 2;
 
       var imgIndex = this.cWidth === 1 ? this.cIndex % oneWidthCount : this.cIndex % plusWidthCount + oneWidthCount;
+      var heightClass = this.cWidth === 1 ? 'xmass_snow_top_height_1' : 'xmass_snow_top_height_2';
 
       var snowImg = document.createElement('img');
       snowImg.src = '/images/themes/xmass/' + this._getImage(imgIndex);
       snowImg.setAttribute('class', 'xmass_snow_top');
+      snowImg.setAttribute('class', heightClass);
       Polymer.dom(this.$.mainContent).appendChild(snowImg);
     }
   },
