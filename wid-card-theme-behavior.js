@@ -16,6 +16,10 @@ Polymer.WidCardThemeBehavior = {
       type: Number
     },
 
+    themeTag: {
+      type: String
+    },
+
     xmassImages: {
       type: Array,
       value: ['snow_top_1a.png', 'snow_top_1b.png', 'snow_top_1c.png', 'snow_top_1d.png', 'snow_top_1e.png', 'snow_top_1f.png', 'snow_top_1g.png', 'snow_top_1h.png', 'snow_top_1i.png', 'snow_top_1j.png', 'snow_top_2a.png', 'snow_top_2b.png']
