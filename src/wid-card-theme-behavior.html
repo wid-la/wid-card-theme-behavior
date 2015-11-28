@@ -87,6 +87,11 @@ Polymer.WidCardThemeBehavior = {
       snowImg.setAttribute('class', 'xmass_snow_top ' + heightClass);
       Polymer.dom(this.$.mainContent).appendChild(snowImg);        
     }
+    this._themeChangedCard(themeName);
+  },
+
+  _themeChangedCard: function _themeChangedCard(themeName) {
+    console.log('Theme Change Card Not used for ' + themeName);
   },
 
   _getImage: function(imgIndex) {
