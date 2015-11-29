@@ -16,6 +16,10 @@ Polymer.WidCardThemeBehavior = {
       type: Number
     },
 
+    cHeight: {
+      type: Number
+    },
+
     themeTag: {
       type: String
     },
@@ -40,7 +44,7 @@ Polymer.WidCardThemeBehavior = {
       var plusWidthCount = 2;
 
       var imgIndex = this.cWidth === 1 ? this.cIndex % oneWidthCount : this.cIndex % plusWidthCount + oneWidthCount;
-      var heightClass = this.cWidth === 1 ? 'xmass_snow_top_height_1' : 'xmass_snow_top_height_2';
+      var heightClass = this.cHeight < 3 ? 'xmass_snow_top_height_' + this.cHeight : 'xmass_snow_top_height_3';
 
       var snowImg = document.createElement('img');
       snowImg.src = '/images/themes/xmass/' + this._getImage(imgIndex);
