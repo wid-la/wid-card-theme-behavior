@@ -86,13 +86,18 @@ Polymer.WidCardThemeBehavior = {
   },
 
   _themeChanged: function _themeChanged(themeName) {
-    // console.log('Theme Changed for ', themeName);
     if(themeName === 'xmass') {
       var oneWidthCount = 10;
       var plusWidthCount = 2;
 
       var imgIndex = (this.cWidth === 1) ? this.cIndex % oneWidthCount : (this.cIndex % plusWidthCount) + oneWidthCount;
-      var heightClass = (this.cHeight < 3) ? 'xmass_snow_top_height_' + this.cHeight  : 'xmass_snow_top_height_3';
+      var heightClass = 'xmass_snow_top_height_' + this.cHeight;
+      if (this.cWidth >= 2 && this.cHeight === 1 ) {
+        heightClass = 'xmass_snow_top_height_2';
+      }
+      if (this.cWidth > 4 || this.cHeight > 3) {
+        heightClass = 'xmass_snow_top_height_3';
+      }
 
       var snowImg = document.createElement('img');
       snowImg.src = '/images/themes/xmass/' + this._getImage(imgIndex);
